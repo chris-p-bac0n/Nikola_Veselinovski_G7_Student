@@ -1,0 +1,12 @@
+ul.Bullets {
+    list-style-type: none;
+}
+
+.recipeTableCss {
+    border: 1px solid #000000;
+    border-spacing: 0px;
+}
+
+.dataPadding {
+    padding: 5px;
+}
