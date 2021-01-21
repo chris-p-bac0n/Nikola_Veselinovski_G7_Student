@@ -1,0 +1,10 @@
+.tableStyle {
+    border: 1px solid #000000;
+    border-spacing: 0px;
+}
+
+.tableDataStyle {
+    border: 1px solid #000000;
+    border-spacing: 0px;
+    padding: 10px;
+}
