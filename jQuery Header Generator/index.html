@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HEADER GENERATOR</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+  <h2>Behold the amazing jQuery header generator...thingy!</h2>
+  <form id="headerForm">
+    <label for="headerTextInput">Header text:
+    </label>
+    <br />
+    <input id="headerTextInput" placeholder="Please type your header text here..." type="text" />
+    <h3></h3>
+    <br />
+    <label for="headerColorInput">Header color:
+    </label>
+    <br />
+    <input id="headerColorInput" placeholder="Please type your header color..." type="text" />
+    <h3></h3>
+    <br />
+    <br />
+    <br />
+    <button type="button" id="createHeaderBtn">
+      Create header
+    </button>
+  </form>
+  <div id="headersDiv"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./scripts/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+h2 {
+  text-align: center;
+}
+
+#headerForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
