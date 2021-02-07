@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Users Homework</title>
+</head>
+<body>
+    
+    <section id="search-section">
+        <form id="search-form">
+            <label for="search-bar">Search for a user</label>
+            <input type="text" size="25" name="search-bar" id="search-bar" placeholder="Enter a user name to search for..."/> 
+            <button type="button" id="search-button">Search</button>
+            <button type="button" id="search-reset">Reset</button>
+            <br/>
+            <p id="errorMessage">
+            </p>
+        </form>
+    </section>
+
+    <section id="user-listing">
+        <div>
+            <table id="search-list" border="black">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Full Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Spouse</th>
+                    <th>Pets</th>
+                    <th>Is Married</th>
+                </tr>
+            </table>
+        </div>
+        <div id="registeredUser-list">
+            <table id="user-list" border="black">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Full Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Spouse</th>
+                    <th>Pets</th>
+                    <th>Is Married</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
