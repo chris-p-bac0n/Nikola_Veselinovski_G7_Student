@@ -106,7 +106,7 @@ function resetView() {
 
 function init() {
     listObjectProperties(arrayOfUsers);
-
+    changeView(userList, searchList);
 }
 
 
