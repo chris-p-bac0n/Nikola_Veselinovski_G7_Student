@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching-Adding-Deleting-Editing Users</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">User Add/Search App</h1>
+    </header>
+    <nav class="navigation">
+        <ul>
+            <li class="nav-item" id="search-nav"><a href="#">Search for users</a></li>
+            <li class="nav-item" id="addUser-nav"><a href="#">Add new users</a></li>
+        </ul>
+    </nav>
+
+    <div id="search-user">
+        <section id="search-section">
+            <form id="search-form">
+                <label for="search-bar">Search for a user</label>
+                <input type="text" size="25" name="search-bar" id="search-bar"
+                    placeholder="Enter a user name to search for..." />
+                <button type="button" id="search-button">Search</button>
+                <button type="button" id="search-reset">Reset</button>
+                <br />
+                <p id="errorMessage" class="error-message">
+                </p>
+            </form>
+        </section>
+
+        <section id="user-listing">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Full Name</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Country</th>
+                            <th>Spouse</th>
+                            <th>Pets</th>
+                            <th>Is Married</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-list-table">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <div id="add-user">
+        <h2 id="editUserTitle" class="editUserView"></h2>
+        <form id="addUser-form">
+            <label for="firstName">Enter first name of the user</label>
+            <br />
+            <input type="text" size="25" name="firstName" id="firstName" placeholder="Enter a first name..." />
+            <br /> <br />
+            <label for="lastName">Enter last name of the user</label>
+            <br />
+            <input type="text" size="25" name="lastName" id="lastName" placeholder="Enter a last name..." />
+            <br /> <br />
+            <label for="age">Enter age of the user</label>
+            <br />
+            <input type="number" size="25" name="age" id="age" placeholder="Enter age..." />
+            <br /> <br />
+            <label for="city">Enter city of the user</label>
+            <br />
+            <input type="text" size="25" name="city" id="city" placeholder="Enter a city..." />
+            <br /> <br />
+            <label for="country">Enter the country of the user</label>
+            <br />
+            <input type="text" size="25" name="country" id="country" placeholder="Enter a country..." />
+            <br /> <br />
+            <label for="spouse">Enter the spouse of the user</label>
+            <br />
+            <input type="text" size="25" name="spouse" id="spouse" placeholder="Enter a spouse name..." />
+            <br /> <br />
+            <label for="pets">Enter pet name</label>
+            <br />
+            <input type="text" size="25" name="pets" id="pets" placeholder="Enter a pet..." />
+            <label for="petType">Select type of pet</label>
+            <select name="petType" id="petType">
+                <option value="" disabled selected>Select type</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="fish">Fish</option>
+                <option value="lizard">Lizard</option>
+                <option value="snake">Snake</option>
+            </select>
+            <br /> <br />
+            <p id="errorMessageSubmit" class="error-message">
+            </p>
+            <button type="button" id="submitUser-button">Submit user</button>
+            <button type="button" id="saveEditUser-button" class="editUserView">Save new user info</button>
+        </form>
+    </div>
+
+
+
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>
