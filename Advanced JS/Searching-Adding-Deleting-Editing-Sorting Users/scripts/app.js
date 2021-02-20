@@ -13,11 +13,15 @@ const searchBar = searchForm.querySelector('#search-bar');
 const searchBtn = searchForm.querySelector('#search-button');
 const resetBtn = searchForm.querySelector('#search-reset');
 const searchError = searchForm.querySelector('#errorMessage');
+// const sortAsc = document.getElementById('#sortAsc');
+// const sortDesc = document.getElementById('#sortDesc');
+// const sortReset = document.getElementById('#sortReset');
+const radioButtons = document.querySelectorAll('input[name="sortBy"]');
+const sortBtn = searchForm.querySelector('#sort-button');
 
 // User listing 
 const userListing = document.querySelector('#user-listing');
 const userListTable = userListing.querySelector('#user-list-table');
-// const deleteBtn = document.getElementsByClassName('deleteBtn');
 
 // User submit form
 const submitUserForm = document.querySelector('#addUser-form');
@@ -31,9 +35,6 @@ const spouseInput = submitUserForm.querySelector('#spouse');
 const petsInput = submitUserForm.querySelector('#pets');
 const petTypeInput = submitUserForm.querySelector('#petType');
 const errorMessageSubmit = submitUserForm.querySelector('#errorMessageSubmit');
-const addPetBtn = submitUserForm.querySelector('#addPet-button');
-const removePetBtn = submitUserForm.querySelector('#removePet-button');
-
 
 // Edit user 
 const editUserTitle = document.querySelector('#editUserTitle');
@@ -51,8 +52,7 @@ const jackBlack = new User('Jack', 'Black', 51, 'Santa Monica', 'USA', ['Tenacio
 const jackNicholson = new User('Jack', 'Nicholson', 83, 'Neptune City', 'USA', ['Wacky', 'Looney'], 'Sandra Knight');
 arrayOfUsers.push(johnWayne, johnWick, johnnyBravo, jackBlack, jackNicholson);
 let arrayOfInputs = [firstNameInput, lastNameInput, ageInput, cityInput, countryInput, spouseInput, petsInput, petTypeInput];
-// arrayOfInputs.push(firstNameInput, lastNameInput, ageInput, cityInput, countryInput, spouseInput, petsInput, petTypeInput);
-let  userToEdit = '';
+let userToEdit = '';
 
 // [Functions]
 
@@ -75,9 +75,6 @@ const addNewUserStart = () => {
         } else {
             input.style.backgroundColor = '#ff000000';
         }
-        // if (validateInput(input)) {
-        //     input.style.backgroundColor = '#ff000000';
-        // }
     })
 
     if (!errorAddingUser) {
@@ -195,13 +192,8 @@ const cleanUpInputs = (inputs) => inputs.forEach(input => input.value = '');
 const cleanUpInput = (input) => input.value = '';
 
 const validateInput = (input) => !!input.value;
-//     if (!input.value) {
-//         return false;
-//     }
-//     return true;
-// }
 
-const resetInputColor = () => arrayOfInputs.forEach(input => input.style.backgroundColor = '#ff000000')
+const resetInputColor = () => arrayOfInputs.forEach(input => input.style.backgroundColor = '#ff000000');
 
 const listObjectProperties = (array) => {
     userListTable.innerHTML = '';
@@ -211,7 +203,7 @@ const listObjectProperties = (array) => {
             if (user[key] == user.id) {
                 continue;
             }
-            tableData += `<td>${user[key]}</td>`
+            tableData += `<td>${user[key]}</td>`;
         }
         userListTable.innerHTML +=
             `<tr>
@@ -227,15 +219,21 @@ const listObjectProperties = (array) => {
 const generatePet = (petName, petType) => { new Pet(petName, petType) };
 
 const deleteUser = (id) => {
-    // arrayOfUsers.forEach(user => {
-    //     if (user.id == id) {
-    //         let userToDelete = arrayOfUsers.indexOf(user);
-    //         arrayOfUsers.splice(userToDelete, 1)
-    //     }
-    // })
-    // listObjectProperties(arrayOfUsers);
-    arrayOfUsers.splice(arrayOfUsers.findIndex(user => user.id == id),1);
+    arrayOfUsers.splice(arrayOfUsers.findIndex(user => user.id == id), 1);
     listObjectProperties(arrayOfUsers);
+}
+
+const sortUsers = (arrToSort) => {
+    let arrSorted = [];
+    if (radioButtons[0].checked === true){
+        arrSorted = arrToSort.slice().sort((userA, userB) => (userA.fullName > userB.fullName) ? 1 : -1);
+        listObjectProperties(arrSorted);
+    } else if (radioButtons[1].checked === true){
+        arrSorted = arrToSort.slice().sort((userA, userB) => (userA.fullName > userB.fullName) ? -1 : 1);
+        listObjectProperties(arrSorted);
+    } else {
+        listObjectProperties(arrToSort);
+    }
 }
 
 const changeView = (show, hide) => {
@@ -248,6 +246,7 @@ const changeView = (show, hide) => {
 }
 
 // [Event Handlers]
+
 searchBtn.addEventListener('click', searchStart)
 
 resetBtn.addEventListener('click', () => listObjectProperties(arrayOfUsers))
@@ -274,9 +273,11 @@ searchUserNav.addEventListener('click', e => {
     }
 })
 
-submitUserBtn.addEventListener('click', addNewUserStart)
+submitUserBtn.addEventListener('click', addNewUserStart);
 
-saveEditUserBtn.addEventListener('click', editUser)
+saveEditUserBtn.addEventListener('click', editUser);
+
+sortBtn.addEventListener('click', sortUsers(arrayOfUsers));
 
 // [Models]
 function User(firstName, lastName, age, city, country, pets, spouse) {
