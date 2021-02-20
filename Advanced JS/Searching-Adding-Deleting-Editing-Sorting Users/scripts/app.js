@@ -13,11 +13,7 @@ const searchBar = searchForm.querySelector('#search-bar');
 const searchBtn = searchForm.querySelector('#search-button');
 const resetBtn = searchForm.querySelector('#search-reset');
 const searchError = searchForm.querySelector('#errorMessage');
-// const sortAsc = document.getElementById('#sortAsc');
-// const sortDesc = document.getElementById('#sortDesc');
-// const sortReset = document.getElementById('#sortReset');
 const radioButtons = document.querySelectorAll('input[name="sortBy"]');
-const sortBtn = searchForm.querySelector('#sort-button');
 
 // User listing 
 const userListing = document.querySelector('#user-listing');
@@ -277,7 +273,11 @@ submitUserBtn.addEventListener('click', addNewUserStart);
 
 saveEditUserBtn.addEventListener('click', editUser);
 
-sortBtn.addEventListener('click', sortUsers(arrayOfUsers));
+radioButtons[0].addEventListener('click', () => sortUsers(arrayOfUsers));
+
+radioButtons[1].addEventListener('click', () => sortUsers(arrayOfUsers));
+
+radioButtons[2].addEventListener('click', () => sortUsers(arrayOfUsers));
 
 // [Models]
 function User(firstName, lastName, age, city, country, pets, spouse) {
