@@ -16,16 +16,7 @@ console.log('----------------------------------------------------------------');
 
 console.log('[Array with updated titles]');
 
-const usersUpdatedTitles = users.map(user => {
-    if (user.gender == 'm') {
-        user = {...user};
-        user.title = 'Mr';
-    } else if (user.gender == 'f') {
-        user = {...user};
-        user.title = 'Ms';
-    }
-    return user
-})
+const usersUpdatedTitles = users.map(user => (user.gender === 'm') ? user = {...user, title: 'Mr'} : user = {...user, title: 'Ms'})
 
 console.log('Updated array - usersUpdatedTitles', usersUpdatedTitles);
 console.log('Original array - users', users);
@@ -35,7 +26,7 @@ console.log('----------------------------------------------------------------');
 
 console.log('[Array with male users]');
 
-const usersMaleUsers = users.slice().filter(user => user.gender == 'm');
+const usersMaleUsers = users.filter(user => user.gender === 'm');
 
 console.log('Updated array - usersMaleUsers', usersMaleUsers);
 console.log('Original array - users', users);
@@ -45,7 +36,7 @@ console.log('----------------------------------------------------------------');
 
 console.log('[Array with users not from MK]');
 
-const usersNotFromMK = users.slice().filter(user => !user.address.includes('MK'));
+const usersNotFromMK = users.filter(user => !user.address.includes('MK'));
 
 console.log('Updated array - usersNotFromMK', usersNotFromMK);
 console.log('Original array - users', users);
@@ -55,7 +46,7 @@ console.log('----------------------------------------------------------------');
 
 console.log('[Array with users that have a car]');
 
-const usersWithCar = users.slice().filter(user => user.hasCar == true);
+const usersWithCar = users.filter(user => user.hasCar = true);
 
 console.log('Updated array - usersWithCar', usersWithCar);
 console.log('Original array - users', users);
@@ -65,21 +56,10 @@ console.log('----------------------------------------------------------------');
 
 console.log('[Array with message for users with hair]');
 
-const usersWithHairAndMessage = (() => {
-    const usersWithHair = users.slice().filter(user => user.hairColor === null);
-    const userCarValidate = (user) => {
-        let result = ''
-        if (user.hasCar == true) {
-            result = 'has'
-        } else if (user.hasCar == false) {
-            result = `hasn't`
-        }
-        return result
-    }
-    usersWithHair.forEach(user => console.log(`${user.name} which is ${user.age} years old, living in ${user.address} is working as a ${user.job} and ${userCarValidate(user)} got a car`))
-    console.log('Updated array - usersWithHair', usersWithHair);
+const usersWithHairAndMessage = (() => {users.filter(user => user.hairColor === null).forEach(user => console.log(`${user.name} which is ${user.age} years old, living in ${user.address} is working as a ${user.job} and ${user.hasCar ? 'has' : "hasn't"} got a car`))
 })()
-
+    
+console.log('Updated array - usersWithHair', users.filter(user => user.hairColor === null));
 console.log('Original array - users', users);
 console.log('----------------------------------------------------------------');
 
@@ -87,7 +67,7 @@ console.log('----------------------------------------------------------------');
 
 console.log('[Array with users older than 28]');
 
-const usersOlderThanTwentyEight = users.slice().filter(user => user.age > 28);
+const usersOlderThanTwentyEight = users.filter(user => user.age > 28);
 
 console.log('Updated array - usersOlderThanTwentyEight', usersOlderThanTwentyEight);
 console.log('Original array - users', users);
@@ -97,12 +77,8 @@ console.log('----------------------------------------------------------------');
 
 console.log(`[Array with users that have a car and it's white]`);
 
-const usersWithCarWhite = users.map(user => {
-    if (user.hasCar == true) {
-        user = {...user, carColor: 'white'};
-    }
-    return user;
-})
+const usersWithCarWhite = users.filter(user => user.hasCar = true).map(user => user = {...user, carColor: 'white'})
+   
 console.log('Updated array - usersWithCarWhite', usersWithCarWhite);
 console.log('Original array - users', users);
 console.log('----------------------------------------------------------------');
@@ -111,16 +87,7 @@ console.log('----------------------------------------------------------------');
 
 console.log(`[Variable with info if all users have hair]`);
 
-const infoUserHair = (() => {
-    let userHairValidate = users.some(user => user.hairColor === null)
-    let result = ''
-    if (userHairValidate) {
-        result = `Not all users have hair`
-    } else if (!userHairValidate) {
-        result = `All users have hair`
-    }
-    return result
-})()
+const infoUserHair = (() => (users.some(user => user.hairColor) ? `Not all users have hair` : `All users have hair`))()
 
 console.log(`Info - `,infoUserHair);
 console.log('Original array - users', users);
@@ -130,16 +97,7 @@ console.log('----------------------------------------------------------------');
 
 console.log(`[Variable with info if some users work as a manager]`);
 
-const infoWorkAsManager = (() => {
-    let userWorkAsManager = users.some(user => user.job === 'manager')
-    let result = ''
-    if (userWorkAsManager) {
-        result = `Some users work as a manager`
-    } else if (!userWorkAsManager) {
-        result = `None of the users work as a manager`
-    }
-    return result
-})()
+const infoWorkAsManager = (() => (users.some(user => user.job === 'manager') ? `Some users work as a manager` : `None of the users work as a manager`))()
 
 console.log(`Info - `, infoWorkAsManager);
 console.log('Original array - users', users);
@@ -160,7 +118,7 @@ console.log('----------------------------------------------------------------');
 
 console.log(`Save the user Clara in a separate variable`);
 
-const claraVariable = (() => users.filter(user => user.name === 'Clara'))()
+const claraVariable = (() => users.find(user => user.name === 'Clara'))()
 
 console.log(`The variable where Clara is saved is claraVariable and returns the following `, `claraVariable`, claraVariable);
 console.log('Original array - users', users);
