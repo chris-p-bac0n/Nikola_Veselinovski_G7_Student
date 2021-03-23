@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZEN\\Documents\\GitHub\\Nikola_Veselinovski_G7_Student\\.NET HOMWORKS\\Class01Solution\\Class01Code\\Class01Code.csproj",
+      "projectUniqueName": "C:\\Users\\ZEN\\Documents\\GitHub\\Nikola_Veselinovski_G7_Student\\.NET HOMWORKS\\Class01Solution\\Class01Solution\\Class01Code\\Class01Code.csproj",
       "projectName": "Class01Code",
-      "projectPath": "C:\\Users\\ZEN\\Documents\\GitHub\\Nikola_Veselinovski_G7_Student\\.NET HOMWORKS\\Class01Solution\\Class01Code\\Class01Code.csproj",
+      "projectPath": "C:\\Users\\ZEN\\Documents\\GitHub\\Nikola_Veselinovski_G7_Student\\.NET HOMWORKS\\Class01Solution\\Class01Solution\\Class01Code\\Class01Code.csproj",
       "packagesPath": "C:\\Users\\ZEN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZEN\\Documents\\GitHub\\Nikola_Veselinovski_G7_Student\\.NET HOMWORKS\\Class01Solution\\Class01Code\\obj\\",
+      "outputPath": "C:\\Users\\ZEN\\Documents\\GitHub\\Nikola_Veselinovski_G7_Student\\.NET HOMWORKS\\Class01Solution\\Class01Solution\\Class01Code\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
