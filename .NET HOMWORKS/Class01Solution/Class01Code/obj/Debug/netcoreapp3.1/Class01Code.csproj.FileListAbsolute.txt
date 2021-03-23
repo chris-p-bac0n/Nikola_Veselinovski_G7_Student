@@ -1,0 +1,13 @@
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\bin\Debug\netcoreapp3.1\Class01Code.exe
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\bin\Debug\netcoreapp3.1\Class01Code.deps.json
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\bin\Debug\netcoreapp3.1\Class01Code.runtimeconfig.json
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\bin\Debug\netcoreapp3.1\Class01Code.runtimeconfig.dev.json
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\bin\Debug\netcoreapp3.1\Class01Code.dll
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\bin\Debug\netcoreapp3.1\Class01Code.pdb
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\obj\Debug\netcoreapp3.1\Class01Code.csprojAssemblyReference.cache
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\obj\Debug\netcoreapp3.1\Class01Code.AssemblyInfoInputs.cache
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\obj\Debug\netcoreapp3.1\Class01Code.AssemblyInfo.cs
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\obj\Debug\netcoreapp3.1\Class01Code.csproj.CoreCompileInputs.cache
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\obj\Debug\netcoreapp3.1\Class01Code.dll
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\obj\Debug\netcoreapp3.1\Class01Code.pdb
+C:\Users\ZEN\Documents\GitHub\Nikola_Veselinovski_G7_Student\.NET HOMWORKS\Class01Solution\Class01Code\obj\Debug\netcoreapp3.1\Class01Code.genruntimeconfig.cache
