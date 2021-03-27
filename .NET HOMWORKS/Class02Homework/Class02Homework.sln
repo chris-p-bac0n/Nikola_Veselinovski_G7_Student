@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AverageNumber", "AverageNum
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapNumbers", "SwapNumbers\SwapNumbers.csproj", "{041043A8-7901-4663-A49A-47DC8CBB72BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestNumber", "LargestNumber\LargestNumber.csproj", "{220AD897-7668-4533-BC7A-B8E2B658AE67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LargestNumber", "LargestNumber\LargestNumber.csproj", "{220AD897-7668-4533-BC7A-B8E2B658AE67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaysConverter", "DaysConverter\DaysConverter.csproj", "{26E901E1-801F-4A97-A36B-BD04E41B3763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaysConverter", "DaysConverter\DaysConverter.csproj", "{26E901E1-801F-4A97-A36B-BD04E41B3763}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElitePizzaRestaurant", "ElitePizzaRestaurant\ElitePizzaRestaurant.csproj", "{FB770EE6-4706-4147-927D-F81BDD8B4EB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{26E901E1-801F-4A97-A36B-BD04E41B3763}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26E901E1-801F-4A97-A36B-BD04E41B3763}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26E901E1-801F-4A97-A36B-BD04E41B3763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB770EE6-4706-4147-927D-F81BDD8B4EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB770EE6-4706-4147-927D-F81BDD8B4EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB770EE6-4706-4147-927D-F81BDD8B4EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB770EE6-4706-4147-927D-F81BDD8B4EB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
