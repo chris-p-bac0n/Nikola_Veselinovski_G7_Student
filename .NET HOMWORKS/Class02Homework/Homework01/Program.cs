@@ -25,7 +25,6 @@ namespace Homework01
                     Console.WriteLine("Your SECOND input is not a number!");
                     Console.Beep();
                 }
-                return;
             }
             else
             {

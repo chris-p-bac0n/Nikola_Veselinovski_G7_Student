@@ -30,7 +30,6 @@ namespace Homework02
                     Console.WriteLine("Your SECOND or both inputs are not valid numbers!");
                     Console.Beep();
                 }
-                return;
             }
             else
             {

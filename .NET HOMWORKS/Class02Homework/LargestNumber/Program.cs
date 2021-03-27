@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AverageNumber
+namespace LargestNumber
 {
     class Program
     {
@@ -24,9 +24,9 @@ namespace AverageNumber
             bool successfulNumberConversionFour = int.TryParse(inputNumberFour, out int numberFour);
 
             if (
-                !successfulNumberConversionOne || 
-                !successfulNumberConversionTwo || 
-                !successfulNumberConversionThree || 
+                !successfulNumberConversionOne ||
+                !successfulNumberConversionTwo ||
+                !successfulNumberConversionThree ||
                 !successfulNumberConversionFour
                 )
             {
@@ -53,9 +53,24 @@ namespace AverageNumber
             }
             else
             {
-                double result = (numberOne + numberTwo + numberThree + numberFour) / (double)4;
+                int largestNumber = numberOne;
 
-                Console.WriteLine("The average of " + numberOne + ", " + numberTwo + ", " + numberThree + " and " + numberFour + " is: " + result);
+                if (largestNumber < numberTwo)
+                {
+                    largestNumber = numberTwo;
+                }
+
+                if (largestNumber < numberThree)
+                {
+                    largestNumber = numberThree;
+                }
+
+                if (largestNumber < numberFour)
+                {
+                    largestNumber = numberFour;
+                }
+
+                Console.WriteLine("The largest of " + numberOne + ", " + numberTwo + ", " + numberThree + " and " + numberFour + " is: " + largestNumber);
             }
         }
     }
