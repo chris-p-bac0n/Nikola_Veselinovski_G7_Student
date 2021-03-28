@@ -18,243 +18,92 @@ namespace ElitePizzaRestaurant
             {
                 Console.WriteLine("You must enter valid number!");
                 Console.Beep();
+
+                return;
             }
             else if (totalOrders <= 0)
             {
                 Console.WriteLine("You must place at least 1 order!");
                 Console.Beep();
+
+                return;
             }
             else if (totalOrders > 30)
             {
                 Console.WriteLine("You can't place more than 30 orders!");
                 Console.Beep();
+
+                return;
             }
             else
             {
                 int regularOrderPrice;
                 int eliteOrderPrice;
-                double totalPrice = 0;
-                bool orderElite;
-
-                Console.WriteLine("What type of order would you like to continue with: \na) regular order \nb) elite  order");
-                string orderType = Console.ReadLine();
-                               
-                if (orderType.ToLower() == "a" || orderType.ToLower() == "a)" || orderType.ToLower() == "regular" || orderType.ToLower() == "regular order")
-                {
-                    orderElite = false;
-                }
-                else if (orderType.ToLower() == "b" || orderType.ToLower() == "b)" || orderType.ToLower() == "elite" || orderType.ToLower() == "elite order")
-                {
-                    orderElite = true;
-                }
-                else
-                {
-                    Console.WriteLine("You must enter a valid order type!");
-                    Console.Beep();
-
-                    return;
-                }
-
+                double totalPriceElite = 0;
+                double totalPriceRegular = 0;
+                                
                 switch (DayOfWeek.ToLower())
                 {
                     case "monday":
-
-                        regularOrderPrice = 300;
-                        eliteOrderPrice = 450;
-
-                        if (!orderElite)
-                        {
-                            totalPrice = regularOrderPrice * totalOrders;                                                       
-                        }
-                        else if (orderElite)
-                        {
-                            totalPrice = eliteOrderPrice * totalOrders;
-
-                            if (totalOrders > 6)
-                            {
-                                totalPrice -= totalPrice * 20 / 100;
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("You must enter a valid order type!");
-                            Console.Beep();
-                        }
-                        
-                        break;
-
                     case "tuesday":
-
-                        regularOrderPrice = 300;
-                        eliteOrderPrice = 450;
-
-                        if (!orderElite)
-                        {
-                            totalPrice = regularOrderPrice * totalOrders;
-                        }
-                        else if (orderElite)
-                        {
-                            totalPrice = eliteOrderPrice * totalOrders;
-
-                            if (totalOrders > 6)
-                            {
-                                totalPrice -= totalPrice * 20 / 100;
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("You must enter a valid order type!");
-                            Console.Beep();
-                        }
-                                                
-                        break;
-
                     case "wednesday":
 
                         regularOrderPrice = 300;
                         eliteOrderPrice = 450;
 
-                        if (!orderElite)
-                        {
-                            totalPrice = regularOrderPrice * totalOrders;
-                        }
-                        else if (orderElite)
-                        {
-                            totalPrice = eliteOrderPrice * totalOrders;
+                        totalPriceRegular = regularOrderPrice * totalOrders;
+                        totalPriceElite = eliteOrderPrice * totalOrders;
 
-                            if (totalOrders > 6)
-                            {
-                                totalPrice -= totalPrice * 20 / 100;
-                            }
-                        }
-                        else
+                        if (totalOrders > 6)
                         {
-                            Console.WriteLine("You must enter a valid order type!");
-                            Console.Beep();
+                            totalPriceElite -= totalPriceElite * 20 / 100;
                         }
 
                         break;
 
                     case "thursday":
-
-                        regularOrderPrice = 350;
-                        eliteOrderPrice = 500;
-
-                        if (!orderElite)
-                        {
-                            totalPrice = regularOrderPrice * totalOrders;
-
-                            if (totalOrders > 3)
-                            {
-                                totalPrice -= totalPrice * 30 / 100;
-                            }
-                        }
-                        else if (orderElite)
-                        {
-                            totalPrice = eliteOrderPrice * totalOrders;
-
-                            if (totalOrders > 6)
-                            {
-                                totalPrice -= totalPrice * 20 / 100;
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("You must enter a valid order type!");
-                            Console.Beep();
-                        }
-
-                        break;
-
                     case "friday":
 
                         regularOrderPrice = 350;
                         eliteOrderPrice = 500;
 
-                        if (!orderElite)
-                        {
-                            totalPrice = regularOrderPrice * totalOrders;
+                        totalPriceRegular = regularOrderPrice * totalOrders;
+                        totalPriceElite = eliteOrderPrice * totalOrders;
 
-                            if (totalOrders > 3)
-                            {
-                                totalPrice -= totalPrice * 30 / 100;
-                            }
-                        }
-                        else if (orderElite)
+                        if (totalOrders > 3)
                         {
-                            totalPrice = eliteOrderPrice * totalOrders;
+                            totalPriceRegular -= totalPriceRegular * 30 / 100;
+                        }
 
-                            if (totalOrders > 6)
-                            {
-                                totalPrice -= totalPrice * 20 / 100;
-                            }
-                        }
-                        else
+                        if (totalOrders > 6)
                         {
-                            Console.WriteLine("You must enter a valid order type!");
-                            Console.Beep();
+                            totalPriceElite -= totalPriceElite * 20 / 100;
                         }
 
                         break;
 
                     case "saturday":
-
-                        regularOrderPrice = 400;
-                        eliteOrderPrice = 550;
-
-                        if (!orderElite)
-                        {
-                            totalPrice = regularOrderPrice * totalOrders;
-
-                            if (totalOrders > 5)
-                            {
-                                totalPrice -= totalPrice * 35 / 100;
-                            }
-                        }
-                        else if (orderElite)
-                        {
-                            totalPrice = eliteOrderPrice * totalOrders;
-
-                            if (totalOrders > 4)
-                            {
-                                totalPrice -= totalPrice * 40 / 100;
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("You must enter a valid order type!");
-                            Console.Beep();
-                        }
-
-                        break;
-
                     case "sunday":
 
                         regularOrderPrice = 400;
                         eliteOrderPrice = 550;
 
-                        if (!orderElite)
-                        {
-                            totalPrice = regularOrderPrice * totalOrders;
+                        totalPriceRegular = regularOrderPrice * totalOrders;
+                        totalPriceElite = eliteOrderPrice * totalOrders;
 
-                            if (totalOrders > 5)
-                            {
-                                totalPrice -= totalPrice * 35 / 100;
-                            }
-                        }
-                        else if (orderElite)
+                        if (totalOrders > 5)
                         {
-                            totalPrice = eliteOrderPrice * totalOrders;
+                            totalPriceRegular -= totalPriceRegular * 35 / 100;
+                        }
 
-                            if (totalOrders > 4)
-                            {
-                                totalPrice -= totalPrice * 40 / 100;
-                            }
-                        }
-                        else
+                        if (totalOrders > 4)
                         {
-                            Console.WriteLine("You must enter a valid order type!");
-                            Console.Beep();
+                            totalPriceElite -= totalPriceElite * 40 / 100;
+                        }
+
+                        if (totalOrders > 6)
+                        {
+                            totalPriceElite -= totalPriceElite * 20 / 100;
                         }
 
                         break;
@@ -262,9 +111,30 @@ namespace ElitePizzaRestaurant
                     default:
                         Console.WriteLine("You must ener a valid day of the week!");
                         Console.Beep();
+
                         break;                                                
                 }
-                Console.WriteLine("Congratulations, you have booked your " + (orderElite ? "elite" : "regular") + " order for " + totalPrice + " den.");
+
+                if (totalPriceRegular != 0)
+                {
+                    Console.WriteLine("The calculated price for a regular order would be: " + totalPriceRegular + "\nThe calculated price for elite order would be: " + totalPriceElite);
+                    Console.WriteLine("What type of order would you like to continue with: \na) regular order \nb) elite  order");
+                    string orderType = Console.ReadLine();
+
+                    if (orderType.ToLower() == "a" || orderType.ToLower() == "a)" || orderType.ToLower() == "regular" || orderType.ToLower() == "regular order")
+                    {
+                        Console.WriteLine("Congratulations, you have booked your regular order for " + totalPriceRegular + " den.");
+                    }
+                    else if (orderType.ToLower() == "b" || orderType.ToLower() == "b)" || orderType.ToLower() == "elite" || orderType.ToLower() == "elite order")
+                    {
+                        Console.WriteLine("Congratulations, you have booked your elite order for " + totalPriceElite + " den.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You must enter a valid order type!");
+                        Console.Beep();
+                    }
+                }                                
             }
         }
     }
