@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise3", "Exercise3\Exercise3.csproj", "{4E08207F-7011-40CE-8BDD-EAB099741958}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise3", "Exercise3\Exercise3.csproj", "{4E08207F-7011-40CE-8BDD-EAB099741958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharactersGame", "CharactersGame\CharactersGame.csproj", "{8FAA2CD8-DC09-44EF-8698-4A8AD7B66352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStrings", "FunWithStrings\FunWithStrings.csproj", "{6614A197-1E1E-49E5-9D31-9CD5F025E368}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4E08207F-7011-40CE-8BDD-EAB099741958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E08207F-7011-40CE-8BDD-EAB099741958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E08207F-7011-40CE-8BDD-EAB099741958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FAA2CD8-DC09-44EF-8698-4A8AD7B66352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FAA2CD8-DC09-44EF-8698-4A8AD7B66352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FAA2CD8-DC09-44EF-8698-4A8AD7B66352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FAA2CD8-DC09-44EF-8698-4A8AD7B66352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6614A197-1E1E-49E5-9D31-9CD5F025E368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6614A197-1E1E-49E5-9D31-9CD5F025E368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6614A197-1E1E-49E5-9D31-9CD5F025E368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6614A197-1E1E-49E5-9D31-9CD5F025E368}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
