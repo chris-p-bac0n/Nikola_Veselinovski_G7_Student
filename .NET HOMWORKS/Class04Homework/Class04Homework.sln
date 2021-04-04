@@ -5,9 +5,13 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise3", "Exercise3\Exercise3.csproj", "{4E08207F-7011-40CE-8BDD-EAB099741958}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharactersGame", "CharactersGame\CharactersGame.csproj", "{8FAA2CD8-DC09-44EF-8698-4A8AD7B66352}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CharactersGame", "CharactersGame\CharactersGame.csproj", "{8FAA2CD8-DC09-44EF-8698-4A8AD7B66352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithStrings", "FunWithStrings\FunWithStrings.csproj", "{6614A197-1E1E-49E5-9D31-9CD5F025E368}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithStrings", "FunWithStrings\FunWithStrings.csproj", "{6614A197-1E1E-49E5-9D31-9CD5F025E368}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgeCalculator", "AgeCalculator\AgeCalculator.csproj", "{2C8FACD3-D1CB-4C24-B6E9-831084C87A29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessTheSecretNumberGame", "GuessTheSecretNumberGame\GuessTheSecretNumberGame.csproj", "{A27FBDCB-7BE4-425C-A510-82F61865F119}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{6614A197-1E1E-49E5-9D31-9CD5F025E368}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6614A197-1E1E-49E5-9D31-9CD5F025E368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6614A197-1E1E-49E5-9D31-9CD5F025E368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8FACD3-D1CB-4C24-B6E9-831084C87A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8FACD3-D1CB-4C24-B6E9-831084C87A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8FACD3-D1CB-4C24-B6E9-831084C87A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8FACD3-D1CB-4C24-B6E9-831084C87A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27FBDCB-7BE4-425C-A510-82F61865F119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27FBDCB-7BE4-425C-A510-82F61865F119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27FBDCB-7BE4-425C-A510-82F61865F119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27FBDCB-7BE4-425C-A510-82F61865F119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
