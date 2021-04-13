@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QUEUE-STACK-LIST", "QUEUE-STACK-LIST\QUEUE-STACK-LIST.csproj", "{F36DD86B-3F20-4A06-9DD0-8F2A32B06B67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2", "Exercise2\Exercise2.csproj", "{CA51617A-3173-484C-A351-8844A557EC20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F36DD86B-3F20-4A06-9DD0-8F2A32B06B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36DD86B-3F20-4A06-9DD0-8F2A32B06B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36DD86B-3F20-4A06-9DD0-8F2A32B06B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36DD86B-3F20-4A06-9DD0-8F2A32B06B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA51617A-3173-484C-A351-8844A557EC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA51617A-3173-484C-A351-8844A557EC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA51617A-3173-484C-A351-8844A557EC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA51617A-3173-484C-A351-8844A557EC20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7552B94-DC56-42D0-B305-A7D54FAC3F40}
+	EndGlobalSection
+EndGlobal
