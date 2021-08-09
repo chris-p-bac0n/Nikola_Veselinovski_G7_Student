@@ -19,9 +19,10 @@ namespace Class02Exercise
         {
             Console.WriteLine("Bark Bark");
         }
-        public bool Validate()
-        {            
-            return true;
+        public static bool Validate(Dog dog)
+        {
+            if (dog.Id > 0 && dog.Name.Trim().Length > 2 && dog.Color != null) return true;
+            else return false;
         }
     }
 }
