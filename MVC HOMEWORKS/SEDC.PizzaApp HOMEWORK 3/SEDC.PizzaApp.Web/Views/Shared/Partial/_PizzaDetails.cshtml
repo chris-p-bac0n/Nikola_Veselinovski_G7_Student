@@ -1,0 +1,19 @@
+﻿@model PizzaViewModel
+
+<p>This is from the partial view</p>
+<div class="row">
+    <div class="col-md-4">
+        <p>Id: @Model.Id</p>
+        <p>Name: @Model.Name</p>
+        <p>Price: @Model.Price</p>
+
+        @if (Model.IsOnPromotion)
+        {
+            <p> This pizza is on promotion.</p>
+        }
+        else
+        {
+            <p> This pizza is not on promotion.</p>
+        }
+    </div>
+</div>

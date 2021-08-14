@@ -1,0 +1,9 @@
+﻿@model PizzaViewModel
+
+<h1>@ViewData["PizzaDetailsPage"]</h1>
+
+@{
+    var pizza = ViewBag.Pizza as SEDC.PizzaApp.Web.Models.ViewModels.PizzaViewModel;
+}
+
+<partial name="~/Views/Shared/Partial/_PizzaDetails.cshtml" for="@pizza" />
