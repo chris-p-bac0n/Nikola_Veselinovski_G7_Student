@@ -6,13 +6,13 @@ export default function Currency(props) {
 
     const {
         currency,
-        defaultSelect,
+        selectedCurrency,
         onChangeCurrency
     } = props
 
     return (
         <div>
-            <select value={defaultSelect} className="form-select" onChange={onChangeCurrency}>
+            <select value={selectedCurrency} className="form-select" onChange={onChangeCurrency}>
                 {currency.map(currencyOption => (
                     <option key={currencyOption} value={currencyOption}>{currencyOption}</option>
                 ))}
