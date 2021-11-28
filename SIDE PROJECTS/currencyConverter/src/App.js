@@ -12,7 +12,7 @@ function App() {
   const [conversionCurrency, setConversionCurrency] = useState("EUR");
   const [conversionRate, setConversionRate] = useState();
 
-  const apiUrl = `https://freecurrencyapi.net/api/v2/latest?apikey=d80323e0-4eec-11ec-8fc7-8b11d8923846&base_currency=${fromCurrency}`
+  const apiUrl = `https://freecurrencyapi.net/api/v2/latest?apikey=d80323e0-4eec-11ec-8fc7-8b11d8923846&base_currency=${fromCurrency}`;
 
   const sendGetRequest = async () => {
     try {
@@ -21,7 +21,7 @@ function App() {
           let conversionData = resp.data.data;
           setCurrencyOptions([resp.data.query.base_currency, ...Object.keys(conversionData)]);
           setConversionRate(conversionData[toCurrency]);
-          setConversionCurrency(toCurrency)
+          setConversionCurrency(toCurrency);
         })
     } catch (err) {
       console.error(err);
@@ -29,19 +29,21 @@ function App() {
   };
 
   const convertCurrency = (e) => {
-    e.preventDefault()
-    sendGetRequest()
+    e.preventDefault();
+    sendGetRequest();
   }
 
   const switchCurrency = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     let temp = fromCurrency;
     setFromCurrency(toCurrency);
     setToCurrency(temp);
-    sendGetRequest()
+    sendGetRequest();
   }
 
-  useEffect(() => { sendGetRequest() }, [])
+  useEffect(() => { sendGetRequest();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+   }, [])
 
   return (
     <>
@@ -74,5 +76,4 @@ function App() {
     </>
   );
 }
-
 export default App;
