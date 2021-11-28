@@ -5,10 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import convertImg from "./img/arrow-left-right.svg";
 
-let conversionData;
-
 function App() {
-
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("EUR");
@@ -21,7 +18,7 @@ function App() {
     try {
       await axios.get(apiUrl)
         .then((resp) => {
-          conversionData = resp.data.data;
+          let conversionData = resp.data.data;
           setCurrencyOptions([resp.data.query.base_currency, ...Object.keys(conversionData)]);
           setConversionRate(conversionData[toCurrency]);
           setConversionCurrency(toCurrency)
@@ -65,10 +62,10 @@ function App() {
           onChangeCurrency={e => setToCurrency(e.target.value)}
         />
         <button onClick={e => { convertCurrency(e) }}
-          type="button" className="mx-4 btn btn-primary btn-sm">
+          type="button" className="mx-4 my-3 btn btn-primary btn-sm">
           Convert
         </button>
-        <div className="d-flex justify-content-center align-items-center">
+        <div className="my-3 d-flex justify-content-center align-items-center">
           <span className="font-weight-bold">=</span>
           <span className="pl-3 font-weight-bold">{conversionRate}</span>
           <span className="pl-3 font-weight-bold">{conversionCurrency}</span>
