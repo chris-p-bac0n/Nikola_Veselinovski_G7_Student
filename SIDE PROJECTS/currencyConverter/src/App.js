@@ -21,9 +21,7 @@ function App() {
     try {
       await axios.get(apiUrl)
         .then((resp) => {
-          console.log(resp.data.data);
           conversionData = resp.data.data;
-          setCurrencyOptions([])
           setCurrencyOptions([resp.data.query.base_currency, ...Object.keys(conversionData)]);
           setConversionRate(conversionData[toCurrency]);
           setConversionCurrency(toCurrency)
@@ -40,16 +38,9 @@ function App() {
 
   const switchCurrency = (e) => {
     e.preventDefault()
-
-    let a = fromCurrency;
-    let b = toCurrency;
-    let temp;
-    temp = a;
-    a = b;
-    b = temp;
-
-    setFromCurrency(a);
-    setToCurrency(b);
+    let temp = fromCurrency;
+    setFromCurrency(toCurrency);
+    setToCurrency(temp);
     sendGetRequest()
   }
 
@@ -57,7 +48,7 @@ function App() {
 
   return (
     <>
-      <div id="currencyConverterDiv" className="d-flex flex-wrap">
+      <div id="currencyConverterDiv" className="mobileFlex d-flex flex-wrap">
         <Currency
           currency={currencyOptions}
           selectedCurrency={fromCurrency}
