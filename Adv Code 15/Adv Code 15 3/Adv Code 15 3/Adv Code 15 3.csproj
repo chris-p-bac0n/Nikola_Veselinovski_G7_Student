@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Adv_Code_15_3</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="listOfDimensions.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="listOfDimensions.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
