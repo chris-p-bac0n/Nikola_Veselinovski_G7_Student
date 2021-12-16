@@ -12,9 +12,9 @@ export default function Currency(props) {
 
     return (
         <div>
-            <select value={selectedCurrency} className="form-select" onChange={onChangeCurrency}>
-                {currency.map(currencyOption => (
-                    <option key={currencyOption} value={currencyOption}>{currencyOption}</option>
+            <select value={selectedCurrency} className="mr-5 my-3 form-select" onChange={onChangeCurrency}>
+                {currency.map((currencyOption, index) => (
+                    <option key={index} value={currencyOption}>{currencyOption}</option>
                 ))}
             </select>
         </div>
