@@ -8,29 +8,31 @@ namespace numberToWords
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please input a number (only numbers bellow 1 billion and no negatives allowed)");
-            string input = Console.ReadLine();
+            //Console.WriteLine("Please input a number (only numbers bellow 1 billion and no negatives allowed)");
+            //string input = Console.ReadLine();
 
-            if (cleanString(input).Length > 999999999)
-            {
-                Console.WriteLine("only numbers bellow 1 billion");
-            }
-            else
-            {
-                int inputNumber = parseStringToInt(cleanString(input));
-                if (inputNumber == 0)
-                {
-                    Console.WriteLine("zero");
-                }
-                else if (inputNumber < 0)
-                {
-                    Console.WriteLine("no negatives allowed, good vibes only");
-                }
-                else
-                {
-                    Console.WriteLine($"{numbersToWords(inputNumber)}");
-                }
-            }
+            //if (cleanString(input).Length > 999999999)
+            //{
+            //    Console.WriteLine("only numbers bellow 1 billion");
+            //}
+            //else
+            //{
+            //    int inputNumber = parseStringToInt(cleanString(input));
+            //    if (inputNumber == 0)
+            //    {
+            //        Console.WriteLine("zero");
+            //    }
+            //    else if (inputNumber < 0)
+            //    {
+            //        Console.WriteLine("no negatives allowed, good vibes only");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"{numbersToWords(inputNumber)}");
+            //    }
+            //}
+
+            Console.WriteLine($"{wordsToNumber("twenty six million")}");
 
         }
 
@@ -56,7 +58,7 @@ namespace numberToWords
                 "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"
             };
 
-            public static Dictionary<string, long> numberTable = new Dictionary<string, long>
+            public static Dictionary<string, int> numberTable = new Dictionary<string, int>
             {
                 {"zero",0},{"one",1},{"two",2},{"three",3},{"four",4},
                 {"five",5},{"six",6},{"seven",7},{"eight",8},{"nine",9},
@@ -64,8 +66,7 @@ namespace numberToWords
                 {"fourteen",14},{"fifteen",15},{"sixteen",16},
                 {"seventeen",17},{"eighteen",18},{"nineteen",19},{"twenty",20},
                 {"thirty",30},{"forty",40},{"fifty",50},{"sixty",60},
-                {"seventy",70},{"eighty",80},{"ninety",90},{"hundred",100},
-                {"thousand",1000},{"million",1000000}
+                {"seventy",70},{"eighty",80},{"ninety",90}
             };
         }
 
@@ -96,8 +97,9 @@ namespace numberToWords
             }
 
             int tenth = parseStringToInt(modifiedInputString.Remove(0, 1));
-            if (tenth > 9 || tenth < 20)
+            if (tenth > 9 && tenth < 20)
             {
+                Console.WriteLine(tenth);
                 string spacingAndOther = finalHundredString == string.Empty ? $"{NumberToWordLexicon.onesAndTens[tenth]}" : $" and {NumberToWordLexicon.onesAndTens[tenth]}";
                 finalHundredString += spacingAndOther;
             }
@@ -142,6 +144,112 @@ namespace numberToWords
             }
 
             return finalString;
+        }
+
+        static int wordsToNumber(string inputString)
+        {
+            string finalString = string.Empty;
+            int finalNumber = 0;
+            string[] modifiedInputString = inputString.Trim().Split(" ");
+
+            int indexOfMillion = Array.IndexOf(modifiedInputString, "million");
+            int indexOfThousand = Array.IndexOf(modifiedInputString, "thousand");
+
+            if (modifiedInputString.Contains("million"))
+            {
+                List<string> listOfWords = new List<string>();
+                for (int i = 0; i < indexOfMillion; i++)
+                {
+                    listOfWords.Add(modifiedInputString[i]);
+                }
+
+                string[] words = listOfWords.ToArray();
+                string finalMillionString = wordsToHundreds(words);
+                finalMillionString += "000000";
+
+                finalNumber += Int32.Parse(finalMillionString);
+            }
+
+            if (modifiedInputString.Contains("thousand"))
+            {
+                List<string> listOfWords = new List<string>();
+
+                if (modifiedInputString.Contains("million"))
+                {
+                    for (int i = indexOfMillion; i < indexOfThousand; i++)
+                    {
+                        listOfWords.Add(modifiedInputString[i]);
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < indexOfThousand; i++)
+                    {
+                        listOfWords.Add(modifiedInputString[i]);
+                    }
+                }
+
+                string[] words = listOfWords.ToArray();
+                string finalThousandsString = wordsToHundreds(words);
+                finalThousandsString += "000";
+
+                finalNumber += Int32.Parse(finalThousandsString);
+            }
+
+            if (true)
+            {
+                List<string> listOfWords = new List<string>();
+
+                if (modifiedInputString.Contains("thousand"))
+                {
+                    for (int i = indexOfThousand; i < modifiedInputString.Length; i++)
+                    {
+                        listOfWords.Add(modifiedInputString[i]);
+                    }
+                }
+                else if (modifiedInputString.Contains("million"))
+                {
+                    for (int i = indexOfMillion; i < modifiedInputString.Length; i++)
+                    {
+                        listOfWords.Add(modifiedInputString[i]);
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < modifiedInputString.Length; i++)
+                    {
+                        listOfWords.Add(modifiedInputString[i]);
+                    }
+                }
+
+                string[] words = listOfWords.ToArray();
+                string finalHundredsString = wordsToHundreds(words);
+
+                finalNumber += Int32.Parse(finalHundredsString);
+            }
+            return finalNumber;
+        }
+
+        static string wordsToHundreds(string[] inputStringArray)
+        {
+            int finalHundred = 0;
+            for (int i = 0; i < inputStringArray.Length; i++)
+            {
+                int number = 0;
+
+                if (NumberToWordLexicon.numberTable.TryGetValue(inputStringArray[i], out number))
+                {
+                    if (finalHundred == 0 && inputStringArray.Contains("hundred"))
+                    {
+                        finalHundred += number * 100;
+                    } else if (number != 0)
+                    {
+                        finalHundred += number;
+                    }
+                }
+                else continue;
+            }
+            return finalHundred.ToString();
         }
     }
 }
