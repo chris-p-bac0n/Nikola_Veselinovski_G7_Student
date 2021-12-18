@@ -8,6 +8,8 @@ namespace numberToWords
     {
         static void Main(string[] args)
         {
+
+
             //Console.WriteLine("Please input a number (only numbers bellow 1 billion and no negatives allowed)");
             //string input = Console.ReadLine();
 
@@ -156,15 +158,15 @@ namespace numberToWords
 
             if (modifiedInputString.Contains("million"))
             {
-                finalNumber += Int32.Parse(wordsToNumbersMillion(indexOfMillion, modifiedInputString));
+                finalNumber += parseStringToInt(wordsToNumbersMillion(indexOfMillion, modifiedInputString));
             }
 
             if (modifiedInputString.Contains("thousand"))
             {
-                finalNumber += Int32.Parse(wordsToNumbersThousand(indexOfMillion, indexOfThousand, modifiedInputString));
+                finalNumber += parseStringToInt(wordsToNumbersThousand(indexOfMillion, indexOfThousand, modifiedInputString));
             }
 
-            finalNumber += Int32.Parse(wordsToNumbersHundreds(indexOfMillion, indexOfThousand, modifiedInputString));
+            finalNumber += parseStringToInt(wordsToNumbersHundreds(indexOfMillion, indexOfThousand, modifiedInputString));
 
             return finalNumber;
         }
