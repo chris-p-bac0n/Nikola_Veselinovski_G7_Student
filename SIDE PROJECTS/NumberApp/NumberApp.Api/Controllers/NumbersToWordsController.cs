@@ -40,39 +40,39 @@ namespace NumberApp.Api.Controllers
             _wordsToNumbersService = wordsToNumbersService;
         }
 
-        [HttpGet]
-        public string GetWordsFromNumber([FromBody] UserInput userInput)
+        [HttpPost]
+        public object GetWordsFromNumber([FromBody] UserInput userInput)
         {
             try
             {
                 var result = _numbersToWordsService.ConvertNumbersToWords(userInput.Input);
-                return result;
+                return new { result };
             }
             catch (ArgumentOutOfRangeException ex)
             {
-                return ex.Message;
+                return new { result = ex.Message };
             }
             catch (ArgumentException ex)
             {
-                return ex.Message;
+                return new { result = ex.Message };
             }
         }
 
-        [HttpGet("vice-versa")]
-        public string GetNumberFromWords([FromBody] UserInput userInput)
+        [HttpPost("vice-versa")]
+        public object GetNumberFromWords([FromBody] UserInput userInput)
         {
             try
             {
                 var result = _wordsToNumbersService.ConvertWordsToNumbers(userInput.Input);
-                return result.ToString();
+                return new { result = result.ToString() };
             }
             catch (ArgumentOutOfRangeException ex)
             {
-                return ex.Message;
+                return new { result = ex.Message };
             }
             catch (ArgumentException ex)
             {
-                return ex.Message;
+                return new { result = ex.Message };
             }
         }
     }
