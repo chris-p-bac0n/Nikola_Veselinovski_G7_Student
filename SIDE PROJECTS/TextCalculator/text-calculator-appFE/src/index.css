@@ -1,0 +1,9 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  flex-direction: column;
+}
+.plusLogo {
+  width: 30%;
+  margin-bottom: 2.5rem;
+}
