@@ -14,8 +14,7 @@
 3. Navigate 1 folder back and open a terminal in the **text-calculator-appFE** folder and run **npm install** and close the terminal
 4. Open **text-calculator-app** in a code editor and open the **App.JS** file inside the **src** folder
 5. Now replace the URL in the apiUrl constant with the base URL that you copied in the second step (be sure to check if you have only 1 set of quotation marks and that the url is exactly as you copied it):
-    from ex. - const apiUrl = `https://localhost:44393/api/text-calculator`;
-    to       - const apiUrl = PASTE HERE <-------
+    from ex. - const apiUrl = `https://localhost:44393/api/text-calculator` <br/>to       - const apiUrl = PASTE HERE <-------
 6. Finally open a terminal again in the **text-calculator-appFE** folder and run **npm start**
 
 ## Features ✨
